@@ -4,6 +4,7 @@
   "description": "Transport for  amqp, socket, http and others",
   "main": "dist/index.js",
   "scripts": {
+    "prepublish": "npm run build",
     "build": "tsc",
     "watch": "tsc -w"
   },
@@ -14,7 +15,8 @@
   },
   "engine-strict" : true,
   "dependencies": {
-    "amqp-rpc": "0.0.8"
+    "amqp-rpc": "0.0.8",
+    "single-init": "1.0.1"
   },
   "devDependencies": {
     "typescript": "2.0.3"

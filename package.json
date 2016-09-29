@@ -1,6 +1,6 @@
 {
   "name": "common-transport",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Transport for  amqp, socket, http and others",
   "main": "dist/index.js",
   "types":"dist/index.d.ts",

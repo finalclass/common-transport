@@ -1,0 +1,22 @@
+{
+  "name": "common-transport",
+  "version": "1.0.0",
+  "description": "Transport for  amqp, socket, http and others",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">= 4"
+  },
+  "engine-strict" : true,
+  "dependencies": {
+    "amqp-rpc": "0.0.8"
+  },
+  "devDependencies": {
+    "typescript": "2.0.3"
+  }
+}

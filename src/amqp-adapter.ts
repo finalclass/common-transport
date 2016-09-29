@@ -28,6 +28,7 @@ export class AmqpAdapter implements IAdapter {
 
     public init({amqp}:{amqp:IAmqpAdapterConfig}):Promise<void> {
         amqp = this.initDefaults(amqp);
+        console.log(`amqp://${amqp.user}:${amqp.pass}@${amqp.host}:${amqp.port}`);
         this.rpc = rpcFactory({
             url: `amqp://${amqp.user}:${amqp.pass}@${amqp.host}:${amqp.port}`
         });
@@ -38,7 +39,7 @@ export class AmqpAdapter implements IAdapter {
         this.rpc.on(method, callback);
     }
 
-    public call(method:string, params:any):Promise<any> {
+    public call(method:string, params:any = null):Promise<any> {
         return new Promise((resolve, reject) => {
             this.rpc.call(method, params, resolve);
         });

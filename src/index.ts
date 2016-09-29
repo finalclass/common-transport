@@ -32,7 +32,7 @@ export default class CommonTransport {
         return adapter.on(method, callback);
     }
 
-    public async call(method: string, params: any[]): Promise<any> {
+    public async call(method: string, params?: any): Promise<any> {
         let adapter = await this.adapterSingleInit.get()
         return await adapter.call(method, params);
     }

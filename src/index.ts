@@ -12,7 +12,7 @@ export interface ICommonTransportConfig {
     }
 }
 
-export class CommonTransport {
+export default class CommonTransport {
 
     private adapterSingleInit: SingleInit<IAdapter>;
 

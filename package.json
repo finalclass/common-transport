@@ -1,6 +1,6 @@
 {
   "name": "common-transport",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Transport for  amqp, socket, http and others",
   "main": "dist/index.js",
   "types":"dist/index.d.ts",
@@ -17,7 +17,8 @@
   "engine-strict" : true,
   "dependencies": {
     "amqp-rpc": "0.0.8",
-    "single-init": "1.1.0"
+    "single-init": "1.1.0",
+    "debug": "2.2.0"
   },
   "devDependencies": {
     "typescript": "2.0.3"

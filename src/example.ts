@@ -16,11 +16,13 @@ if (cluster.isMaster) {
     ct.on('get number', function (params, reply) {
         console.log('on get number');
         reply(5);
+        ct.disconnect();
     });
     cluster.fork();
 } else {
     console.log('Im a client');
-    ct.call('get number', 2).then(function (result) {
+    ct.call('get number').then(function (result) {
         console.log('Got number: ', result);
+        ct.disconnect();
     });
 }

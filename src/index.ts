@@ -37,4 +37,13 @@ export default class CommonTransport {
         return await adapter.call(method, params);
     }
 
+    public async disconnect() : Promise<void> {
+        if (this.adapterSingleInit.state === 'cold') {
+            return;
+        } else {
+            let adapter = await this.adapterSingleInit.get();
+            adapter.disconnect();
+        }
+    }
+
 }

@@ -45,4 +45,9 @@ export class AmqpAdapter implements IAdapter {
         });
     }
 
+    public disconnect():Promise<any> {
+        this.rpc.disconnect();
+        return Promise.resolve();
+    }
+
 }
